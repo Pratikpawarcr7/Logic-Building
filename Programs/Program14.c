@@ -12,14 +12,14 @@ int Display(int iNo)
     }
     else
     {
-            return false;
+        return false;
     }
 }
 int main()
 {
 
     int iValue = 0;
-    int iRet = 0;
+    bool iRet = 0;
     printf("Enter the number :\n");
     scanf("%d", &iValue);
 
