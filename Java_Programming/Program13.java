@@ -10,16 +10,19 @@ class Display {
     public void Number() {
         int iCnt = 0;
 
-        System.out.println("Numbers Are : ");
-        for (iCnt = 1; iCnt <= iNo1; iCnt++) {
-            System.out.println(iCnt);
+        System.out.println("Factors of " + iNo1 + " Are :");
+        for (iCnt = 1; iCnt < iNo1; iCnt++) {
+
+            if (iNo1 % iCnt == 0) {
+                System.out.println(iCnt);
+            }
 
         }
     }
 
 }
 
-public class Program12 {
+public class Program13 {
 
     public static void main(String Arr[]) {
 

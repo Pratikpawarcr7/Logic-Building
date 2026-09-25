@@ -1,32 +1,54 @@
-import java.util.Scanner;
+class Arithmatics {
 
-class Largest
-{
-    public static void main(String[] args)
-    {
-        Scanner sobj = new Scanner(System.in);
+    public int iNo1;
+    public int iNo2;
 
-        int Number1, Number2;
+    public Arithmatics() {
 
-        System.out.print("Enter first number: ");
-        Number1 = sobj.nextInt();
+        System.out.println("Inside Default Constructor");
 
-        System.out.print("Enter second number: ");
-        Number2 = sobj.nextInt();
+        this.iNo1 = 0;
+        this.iNo2 = 0;
 
-        if (Number1 > Number2)
-        {
-            System.out.println(Number1 + " is largest");
-        }
-        else if (Number2 > Number1)
-        {
-            System.out.println(Number2 + " is largest");
-        }
-        else
-        {
-            System.out.println("Both numbers are equal");
-        }
-
-        sobj.close();
     }
+
+    public Arithmatics(int A, int B) {
+
+        System.out.println("Inside Default Constructor");
+        this.iNo1 = A;
+        this.iNo2 = B;
+    }
+
+    public int Addition() {
+
+        int iResult = 0;
+        iResult = iNo1 + iNo2;
+        return iResult;
+
+    }
+
+    public int Substraction() {
+
+        int iResult = 0;
+        iResult = iNo1 - iNo2;
+        return iResult;
+
+    }
+}
+
+public class Program11 {
+
+    public static void main(String Arr[]) {
+
+        int iRet = 0;
+
+        Arithmatics aobj1 = new Arithmatics(16, 29);
+        iRet = aobj1.Addition();
+        System.out.println("Addition : " + iRet);
+
+        iRet = aobj1.Substraction();
+        System.out.println("Substraction : " + iRet);
+
+    }
+
 }
