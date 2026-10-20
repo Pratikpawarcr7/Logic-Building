@@ -1,42 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-int Addition(int Arr[], int iSize)
+
+void DisplayDigit(int iNo)
 {
-    int iCnt = 0;
-    int iSum = 0;
-    for (iCnt = iSize - 1; iCnt >= 0; iCnt--)
+    int iDigit = 0;
+    while (iNo > 0) // whille Jopryeit (iNo>0)topryeit;
     {
-        printf("%d\n", Arr[iCnt]);
+        iDigit = iNo % 10;
+        printf("%d", iDigit);
+        iNo = iNo / 10;
     }
-    return iSum;
 }
 int main()
 {
-    int *iPtr = NULL;
-    int iLength = 0;
-    int iCnt = 0;
-    int iRet = 0;
 
-    printf("Enter The How many Elements You Want In Your Array :\n");
-    scanf("%d", &iLength);
+    int iValue = 0;
+    printf("Enter the Number\n");
+    scanf("%d", &iValue);
 
-    iPtr = (int *)malloc(iLength * sizeof(int));
+    DisplayDigit(iValue);
 
-    printf("Enter the Elements : \n");
-    for (iCnt = 0; iCnt < iLength; iCnt++)
-    {
-        scanf("%d", &iPtr[iCnt]);
-    }
-
-    printf("Elements Of Array Are : \n");
-    for (iCnt = 0; iCnt < iLength; iCnt++)
-    {
-        printf("%d\n", iPtr[iCnt]);
-    }
-
-    iRet = Addition(iPtr, iLength);
-    printf("Summation : %d", iRet);
-
-    free(iPtr);
     return 0;
 }
